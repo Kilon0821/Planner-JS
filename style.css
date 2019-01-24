@@ -1,0 +1,28 @@
+/* CSS Document */
+.Planner_Emulator
+{
+	width: 600px;
+	height: 400px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.Emulator
+{
+	height: 100%;
+	width: 75%;
+	border: 1px solid black;
+	float: left;
+}
+
+.Item_Bar
+{
+	height: 100%;
+	width: 24%;
+	border: 1px solid black;
+	float: right;
+}

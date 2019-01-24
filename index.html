@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Planner</title>
+</head>
+
+<body>
+	<input type="text" name="Width" id="Width" onChange="Planner_Emulator()"/>*
+	<input type="text" name="Height" id="Height" onChange="Planner_Emulator(this)"/>
+	<p id="Position"></p>
+	<div class="Planner_Emulator" id="Planner_Emulator">
+		<div class="Emulator" id="Emulator" onMouseMove="mouse_position()">
+		</div>
+		<div class="Item_Bar" id="Item_Bar">
+		</div>
+	</div>
+	<script src="Planner.js"></script>
+</body>
+</html>
