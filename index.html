@@ -10,12 +10,14 @@
 	<input type="text" name="Width" id="Width" onChange="Planner_Emulator()"/>*
 	<input type="text" name="Height" id="Height" onChange="Planner_Emulator(this)"/>
 	<p id="Position"></p>
-	<div class="Planner_Emulator" id="Planner_Emulator">
+	<p id="MousePosition"></p>
+	<div class="Planner_Emulator" id="Planner_Emulator" onMouseMove="Object_Following_Mouse()">
 		<div class="Emulator" id="Emulator" onMouseMove="mouse_position()">
 		</div>
 		<div class="Item_Bar" id="Item_Bar">
 		</div>
 	</div>
-	<script src="Planner.js"></script>
+	<img id='Moving_Object'></img>
+	<script src="Planner.js"></script><img src=""></img>
 </body>
 </html>
