@@ -1,8 +1,8 @@
 /* CSS Document */
 .Planner_Emulator
 {
-	width: 600px;
-	height: 400px;
+	width: 50vw;
+	height: 75vh;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -17,17 +17,26 @@
 	width: 75%;
 	border: 1px solid black;
 	float: left;
+	box-sizing: border-box;
 }
 
 .Item_Bar
 {
 	height: 100%;
-	width: 24%;
+	width: 25%;
 	border: 1px solid black;
 	float: right;
+	box-sizing: border-box;
 }
 
-td,table,tr
+table
 {
-	margin: 0px;
+	border-collapse:collapse; 
+    border-spacing:0;
+	table-layout: fixed;
+}
+
+tr,td
+{
+	padding: 0px;
 }

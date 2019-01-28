@@ -35,7 +35,7 @@ function Calculate_Using_Place()
 	
 }
 */
-//create a Simulation Planner Place,1CM = 1px.
+//create a Simulation Planner Place,5CM = 5px = 1block.
 function Planner_Emulator(object)
 {
 	//document.getElementById("Item_Bar").innerHTML = "123";
@@ -50,16 +50,17 @@ function Planner_Emulator(object)
 //create empty space in Emulator
 function CreateEmtryElement(Height,Width) 
 {
+	var Emulator = document.getElementById("Emulator");
 	var i=0,j=0;
 	var NumberOfBox = Height*Width;
 	var str="";
 	str += "<table>";
-	for(i=0;i<Height;i++)
+	for(i=0;i<Height/5;i++)
 	{
 		str += "<tr>";
-		for(j=0;j<Width;j++)
+		for(j=0;j<Width/5;j++)
 		{
-			str += "<td style='border:1px solid black;width:1px;height:1px;' onmouseover='mouseon(this,"+(j+1)+","+(i+1)+")' onmouseout='mouseout(this)' >" + "" + "</td>";
+			str += "<td style='box-sizing: border-box;border:1px solid black;width:" + Emulator.clientWidth + "px;height:" + parseFloat(Emulator.clientHeight/parseFloat(Height/5)) + "px;' onmouseover='mouseon(this,"+(j+1)+","+(i+1)+")' onmouseout='mouseout(this)' >" + "" + "</td>";
 		}
 		str += "<tr>";
 	}
@@ -75,7 +76,7 @@ function ReadData()
 function Create_Moving_Object()
 {
 	ReadData();
-	var str = "<img src='Object/" + Objects[0].Name + ".jpg' name='" + Objects[0].ID + "' width=50% height=25% ondragstart='return false;' onMouseDown='Object_Selecting(this)'></img>";
+	var str = "<img src='Object/" + Objects[0].Name + ".jpg' name='" + Objects[0].ID + "' width=50% height=20% ondragstart='return false;' onMouseDown='Object_Selecting(this)'></img>";
 	document.getElementById("Item_Bar").innerHTML = str;
 }
 
